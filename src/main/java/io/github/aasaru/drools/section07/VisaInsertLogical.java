@@ -56,7 +56,8 @@ public class VisaInsertLogical {
     }
 
 
-    List<Passport> passports = ApplicationRepository.getPassports();
+//    List<Passport> passports = ApplicationRepository.getPassports();
+    List<Passport> passports = ApplicationRepository.getPassportsAllInvalid();
     passports.forEach(ksession::insert);
 
     List<VisaApplication> visaApplications = ApplicationRepository.getVisaApplications();

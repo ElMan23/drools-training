@@ -1,13 +1,13 @@
-package io.github.aasaru.drools.section07.step1
+package io.github.aasaru.drools.section07.step3
 
-import io.github.aasaru.drools.domain.Validation;
+import io.github.aasaru.drools.domain.ValidVisaApplication;
 import io.github.aasaru.drools.domain.VisaApplication;
 import io.github.aasaru.drools.domain.Visa;
 
 rule "Issue visa for valid applications"
 	dialect "mvel"
 	when
-	  $visaApplication: VisaApplication( validation == Validation.PASSED )
+	  ValidVisaApplication( $visaApplication: this.visaApplication )
 	then
 	  Visa visa = new Visa( $visaApplication.getPassportNumber() );
 	  System.out.println("Issue " + visa);

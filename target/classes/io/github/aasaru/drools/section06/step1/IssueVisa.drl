@@ -1,7 +1,8 @@
-package io.github.aasaru.drools.section07.step1
+package io.github.aasaru.drools.section06.step1
 
 import io.github.aasaru.drools.domain.Validation;
 import io.github.aasaru.drools.domain.VisaApplication;
+import java.time.LocalDate
 import io.github.aasaru.drools.domain.Visa;
 
 rule "Issue visa for valid applications"
@@ -11,5 +12,5 @@ rule "Issue visa for valid applications"
 	then
 	  Visa visa = new Visa( $visaApplication.getPassportNumber() );
 	  System.out.println("Issue " + visa);
-	  insertLogical( visa )
+	  insert( visa )
 end

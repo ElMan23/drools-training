@@ -32,36 +32,74 @@ public class ApplicationRepository {
     List<Passport> passports = new ArrayList<>();
 
     passports.add(Passport.newBuilder()
-      .withPassportNumber(SARAH_PASSPORT_NUMBER)
-      .withName("Sarah Murphy")
-      .withUnusedVisaPages(1)
-      .withExpiresOn(LocalDate.of(2017, Month.DECEMBER, 17))
-      .withAge(50)
-      .build());
+            .withPassportNumber(SARAH_PASSPORT_NUMBER)
+            .withName("Sarah Murphy")
+            .withUnusedVisaPages(1)
+            .withExpiresOn(LocalDate.of(2017, Month.DECEMBER, 17))
+            .withAge(50)
+            .build());
 
     passports.add(Passport.newBuilder()
-      .withPassportNumber(SIMON_PASSPORT_NUMBER)
-      .withName("Simon Murphy")
-      .withUnusedVisaPages(0)
-      .withExpiresOn(LocalDate.of(2045, Month.MAY, 11))
-      .withAge(12)
-      .build());
+            .withPassportNumber(SIMON_PASSPORT_NUMBER)
+            .withName("Simon Murphy")
+            .withUnusedVisaPages(0)
+            .withExpiresOn(LocalDate.of(2045, Month.MAY, 11))
+            .withAge(12)
+            .build());
 
     passports.add(Passport.newBuilder()
-      .withPassportNumber(EMILY_PASSPORT_NUMBER)
-      .withName("Emily Brown")
-      .withUnusedVisaPages(20)
-      .withExpiresOn(LocalDate.of(2047, Month.NOVEMBER, 25))
-      .withAge(16)
-      .build());
+            .withPassportNumber(EMILY_PASSPORT_NUMBER)
+            .withName("Emily Brown")
+            .withUnusedVisaPages(20)
+            .withExpiresOn(LocalDate.of(2047, Month.NOVEMBER, 25))
+            .withAge(16)
+            .build());
 
     passports.add(Passport.newBuilder()
-      .withPassportNumber(JAMES_PASSPORT_NUMBER)
-      .withName("James Brown")
-      .withUnusedVisaPages(10)
-      .withExpiresOn(LocalDate.of(2045, Month.APRIL, 10))
-      .withAge(17)
-      .build());
+            .withPassportNumber(JAMES_PASSPORT_NUMBER)
+            .withName("James Brown")
+            .withUnusedVisaPages(10)
+            .withExpiresOn(LocalDate.of(2045, Month.APRIL, 10))
+            .withAge(17)
+            .build());
+
+    return passports;
+  }
+
+  public static List<Passport> getPassportsAllInvalid() {
+    List<Passport> passports = new ArrayList<>();
+
+    passports.add(Passport.newBuilder()
+            .withPassportNumber(SARAH_PASSPORT_NUMBER)
+            .withName("Sarah Murphy")
+            .withUnusedVisaPages(1)
+            .withExpiresOn(LocalDate.of(2017, Month.DECEMBER, 17))
+            .withAge(50)
+            .build());
+
+    passports.add(Passport.newBuilder()
+            .withPassportNumber(SIMON_PASSPORT_NUMBER)
+            .withName("Simon Murphy")
+            .withUnusedVisaPages(0)
+            .withExpiresOn(LocalDate.of(2017, Month.DECEMBER, 17))
+            .withAge(12)
+            .build());
+
+    passports.add(Passport.newBuilder()
+            .withPassportNumber(EMILY_PASSPORT_NUMBER)
+            .withName("Emily Brown")
+            .withUnusedVisaPages(20)
+            .withExpiresOn(LocalDate.of(2017, Month.DECEMBER, 17))
+            .withAge(16)
+            .build());
+
+    passports.add(Passport.newBuilder()
+            .withPassportNumber(JAMES_PASSPORT_NUMBER)
+            .withName("James Brown")
+            .withUnusedVisaPages(10)
+            .withExpiresOn(LocalDate.of(2017, Month.DECEMBER, 17))
+            .withAge(17)
+            .build());
 
     return passports;
   }
